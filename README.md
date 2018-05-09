@@ -6,6 +6,6 @@ Célia
 
 Base de données : 
 
-nom : projet_ucapes
+nom : projet_ucape
 interclassement : utf8_general_ci
 
