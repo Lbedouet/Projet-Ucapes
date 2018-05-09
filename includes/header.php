@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <title>Projet Ucapes</title>
+    
+    <!---- mettre si compte admin ou compte éléve dans le header ------>
 </head>
 
 <body>
