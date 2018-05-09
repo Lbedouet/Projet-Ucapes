@@ -1,10 +1,11 @@
-## Cours BTS 1 Git 2018
-
-### Apprentissage de Git
-
-- [ ] Commandes simples acquises
-- [ ] Commandes avancées
+Projet Ucapes
 
 Ludovic 
 Anne-France
 Célia
+
+Base de données : 
+
+nom : projet_ucapes
+interclassement : utf8_general_ci
+
