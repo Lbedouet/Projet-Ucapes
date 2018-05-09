@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 09 mai 2018 à 12:37
+-- Généré le :  mer. 09 mai 2018 à 13:02
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `projet_ucapes`
+-- Base de données :  `projet_ucape`
 --
 
 -- --------------------------------------------------------
@@ -31,14 +31,16 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `eleve`;
 CREATE TABLE IF NOT EXISTS `eleve` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
+  `idUtilisateur` int(8) NOT NULL,
   `nom` varchar(16) NOT NULL,
   `prenom` varchar(16) NOT NULL,
   `sexe` varchar(5) NOT NULL,
   `dateNaissance` varchar(10) NOT NULL COMMENT 'Format MM/DD/YYYY',
   `emailResponsable` varchar(32) NOT NULL COMMENT 'Adresse mail du parent responsable de l''enfant',
   `informations` varchar(500) NOT NULL COMMENT '(500 caractères max)',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`),
+  KEY `id` (`idUtilisateur`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -53,7 +55,17 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `email` char(64) NOT NULL COMMENT 'Email',
   `statutAdmin` tinyint(1) NOT NULL COMMENT 'Est administrateur ou non',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `eleve`
+--
+ALTER TABLE `eleve`
+  ADD CONSTRAINT `eleve_ibfk_1` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateur` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
