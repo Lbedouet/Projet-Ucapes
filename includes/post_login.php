@@ -1,13 +1,12 @@
 <?php
     require_once 'includes/db.php';
 
-    if (!empty($_POST) && isset($_POST['connection'])) {
+    if (!empty($_POST) && isset($_POST['connexion'])) {
         if (!empty($_POST['identifiant']) && !empty($_POST['motdepasse'])) {
 
-            $req = $connexion->prepare('SELECT * FROM utilisateur WHERE identifiant = :identifiant AND mot_de_passe = :mot_de_passe');
+            $req = $connexion->prepare('SELECT * FROM utilisateur WHERE identifiant = :identifiant AND motDePasse = :mot_de_passe');
             $req->bindParam(':identifiant', $_POST['identifiant']);
-            $passwordCrypted = sha1($_POST['motdepasse']);
-            $req->bindParam(':mot_de_passe', $passwordCrypted);
+            $req->bindParam(':mot_de_passe', $_POST['motdepasse']);
 
             try {
                 $req->execute();

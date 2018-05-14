@@ -21,7 +21,7 @@ require_once 'includes/post_login.php';
         </div>
 
         <div>
-            <button type="submit" name="connection">Connectez-vous</button>
+            <button type="submit" name="connexion">Connectez-vous</button>
         </div>
     </form>
 
