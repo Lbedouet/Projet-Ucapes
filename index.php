@@ -21,14 +21,15 @@ require_once 'includes/header.php' ;
         </div>
 
         <div>
-            <button type="submit" name="connexion">Connectez-vous</button>
+            <button class="btn btn-default" type="submit" name="connexion">Connexion</button>
         </div>
     </form>
 
 <?php
     }
 ?>
-    
+
+ 
 <?php
 require_once 'includes/footer.php' ;
 ?>
