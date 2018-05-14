@@ -20,13 +20,13 @@
                         'admin' => $resultats['statutAdmin']
                     ];
 
-                    header('Location: index.php');
+                    header('Location: accueil.php');
                 }
 
-                echo '<p>Désolé vous n\'avez pas été trouvé dans la BDD</p>';
+                echo '<p class="error">Vous vous êtes trompé dans votre identifiant ou votre mot de passe, ou bien votre compte n\'existe pas.</p>';
             } catch (\Exception $exception) {
-                echo '<p>Oups une erreur s\'est produite</p>';
-                echo '<p>'.$exception->getMessage().'</p>';
+                echo '<p class="error">Oups une erreur s\'est produite';
+                echo $exception->getMessage().'</p>';
             }
         } else {
             $IdErreur = '<span style="color: red; font-size: 12px;">Veuillez remplir votre email.</span>';
