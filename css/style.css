@@ -1,0 +1,11 @@
+body{
+    background: url('../img/funky-lines.png'); /* Background pattern from Toptal Subtle Patterns */
+}
+.container{
+    background-color: #dfe6e9;
+}
+header{
+    background-color: #76B6BC;
+    width:100%;
+    padding: 1%;
+}

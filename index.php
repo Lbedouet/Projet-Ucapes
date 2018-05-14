@@ -21,7 +21,7 @@ require_once 'includes/header.php' ;
         </div>
 
         <div>
-            <button type="submit" name="connexion">Connectez-vous</button>
+            <button type="submit" class="btn btn-default" name="connexion">Connectez-vous</button>
         </div>
     </form>
 
