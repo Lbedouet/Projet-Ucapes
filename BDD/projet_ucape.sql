@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 09 mai 2018 à 13:02
+-- Généré le :  lun. 14 mai 2018 à 12:33
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -51,11 +51,20 @@ CREATE TABLE IF NOT EXISTS `eleve` (
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `id` int(8) NOT NULL AUTO_INCREMENT COMMENT 'Identifiant de l''utilisateur',
+  `identifiant` varchar(50) NOT NULL,
   `motDePasse` char(32) NOT NULL COMMENT 'Mot de passe',
   `email` char(64) NOT NULL COMMENT 'Email',
   `statutAdmin` tinyint(1) NOT NULL COMMENT 'Est administrateur ou non',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id`, `identifiant`, `motDePasse`, `email`, `statutAdmin`) VALUES
+(1, 'admin1', 'admin', 'admin@admin.com', 1),
+(2, 'eleve1', 'eleve', 'eleve@eleve.com', 0);
 
 --
 -- Contraintes pour les tables déchargées
