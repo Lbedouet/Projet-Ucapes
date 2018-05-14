@@ -4,9 +4,8 @@ body{
 .container{
     background-color: #efefef;
 }
-header{
+header, footer{
     background-color: #9980AD;
-    width:100%;
     padding: 1%;
 }
 header h1{
