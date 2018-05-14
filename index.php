@@ -4,17 +4,31 @@ require_once 'includes/db.php' ;
 require_once 'includes/header.php' ;
 ?>
 
-    <h2>Bienvenue sur mon super site !</h2>
-
-    <?php
-if (isset($_SESSION['utilisateur'])) { ?>
-        <h3>Vous êtes connecté en tant que
-            <?php echo $_SESSION['utilisateur']['identifiant']; ?>
-        </h3>
-        <?php                                                              
+<?php
+    if (!isset($_SESSION['utilisateur'])) { 
 ?>
-            <?php } else { ?> <a href="login.php">Lien de connexion</a>
-            <?php } ?>
-            <?php
-require_once('includes/footer.php');
+   <h2>Connexion</h2>
+
+    <form action="login.php" method="POST">
+        <div>
+            <label for="identifiant">Identifiant :</label>
+            <input type="identifiant" name="identifiant" id="identifiant" required />
+        </div>
+
+        <div>
+            <label for="motdepasse">Mot de passe :</label>
+            <input type="password" name="motdepasse" id="motdepasse" required />
+        </div>
+
+        <div>
+            <button type="submit" name="connexion">Connectez-vous</button>
+        </div>
+    </form>
+
+<?php
+    }
+?>
+    
+<?php
+require_once 'includes/footer.php' ;
 ?>

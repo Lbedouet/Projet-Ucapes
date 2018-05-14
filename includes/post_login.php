@@ -17,6 +17,7 @@
                     $_SESSION['utilisateur'] = [
                         'identifiant' => $resultats['identifiant'],
                         'id' => $resultats['id'],
+                        'admin' => $resultats['statutAdmin']
                     ];
 
                     header('Location: index.php');

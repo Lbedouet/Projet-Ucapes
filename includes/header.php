@@ -12,3 +12,25 @@
 </head>
 
 <body>
+    <header>
+        <h1>Ucape - Section</h1>
+
+        <?php
+            if (isset($_SESSION['utilisateur'])) { 
+                echo 'Connecté en tant que ';
+
+                echo $_SESSION['utilisateur']['identifiant'];
+
+                if ($_SESSION['utilisateur']['admin'] == 1){
+                    echo ' (administrateur)';
+                }
+                else{
+                    echo ' (étudiant)';
+                }
+                echo ' <a href="logout.php">Déconnexion</a>';
+            } 
+            else { 
+                echo 'Bonjour visiteur';
+            } 
+        ?>
+    </header>
