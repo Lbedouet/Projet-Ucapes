@@ -20,7 +20,7 @@
                         'admin' => $resultats['statutAdmin']
                     ];
 
-                    header('Location: index.php');
+                    header('Location: accueil.php');
                 }
 
                 echo '<p class="error">Vous vous êtes trompé dans votre identifiant ou votre mot de passe, ou bien votre compte n\'existe pas.</p>';

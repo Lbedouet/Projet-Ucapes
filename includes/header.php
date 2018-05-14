@@ -30,12 +30,12 @@
                     echo $_SESSION['utilisateur']['identifiant'];
 
                     if ($_SESSION['utilisateur']['admin'] == 1){
-                        echo '</strong> (administrateur) ';
+                        echo '</strong> (administrateur)';
                     }
                     else{
-                        echo '</strong> (étudiant) ';
+                        echo '</strong> (étudiant)';
                     }
-                    echo ' <br><a href="logout.php">Déconnexion</a></p>';
+                    echo '<br><a href="logout.php">Déconnexion</a></p>';
                 } 
                 else { 
                     echo '<p class="utilisateurConnect">Bonjour visiteur</p>';

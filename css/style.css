@@ -52,3 +52,14 @@ header h1{
 h2{
     color: #763f76;
 }
+
+.flexBox{
+    display: flex;
+    justify-content: space-between;
+}
+.espaceUcape{
+    margin: 1%;
+}
+.espaceUcape p{
+    text-justify:   
+}
