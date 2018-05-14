@@ -2,10 +2,53 @@ body{
     background: url('../img/funky-lines.png'); /* Background pattern from Toptal Subtle Patterns */
 }
 .container{
-    background-color: #dfe6e9;
+    background-color: #efefef;
 }
 header{
-    background-color: #76B6BC;
+    background-color: #9980AD;
     width:100%;
     padding: 1%;
+}
+header h1{
+    color: white;
+    text-shadow: 1px 1px 3px rgb(36, 17, 36);
+}
+.utilisateurConnect{
+    color:white;
+    text-align: right;
+    margin-right: 5%;
+}
+.utilisateurConnect a{
+    color: #380638;
+}
+.utilisateurConnect a:hover{
+    color: #ffd3ff;
+}
+.btn-default:hover{
+    background-color: #9980AD;
+    color: #fff;
+    transition: 0.5s;
+}
+.btn-default{
+    transition: 0.5s;
+}
+.champ{
+    margin: 1% auto;
+    text-align: center;
+}
+.champ label{
+    width: 10%;
+    text-align: right;
+}
+.error{
+    background-color: #f3c9c9;
+    color: red;
+    padding: 1%;
+    text-align: center;
+    border: 1px solid red;
+    margin: 1% 0;
+}
+
+h2{
+    color: #763f76;
 }
