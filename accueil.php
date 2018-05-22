@@ -12,16 +12,16 @@ require_once 'includes/header.php' ;
         ?>
         <div class="btn-group-vertical" role="group" aria-label="...">
             <a class="btn btn-default" href="#">Elèves</a>
-            <a class="btn btn-default" href="#">Documentations</a>
+            <a class="btn btn-default" href="documentation.php">Documentations</a>
         </div>
         <?php
             }
             else{
         ?>  
         <div class="btn-group-vertical" role="group" aria-label="...">
-            <a class="btn btn-default" href="#">Choix des établissements</a>
-            <a class="btn btn-default" href="#">Detailed Student profile</a>
-            <a class="btn btn-default" href="#">Documentation</a>
+            <a class="btn btn-default" href="choix_etablissement.php">Choix des établissements</a>
+            <a class="btn btn-default" href="detailed_student_profile.php">Detailed Student profile</a>
+            <a class="btn btn-default" href="documentation.php">Documentation</a>
         </div>
         <?php
             }
