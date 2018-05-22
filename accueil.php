@@ -12,7 +12,6 @@ require_once 'includes/header.php' ;
         ?>
         <div class="btn-group-vertical" role="group" aria-label="...">
             <a class="btn btn-default" href="#">Elèves</a>
-            <a class="btn btn-default" href="#">Detailed Student profile</a>
             <a class="btn btn-default" href="#">Documentations</a>
         </div>
         <?php
