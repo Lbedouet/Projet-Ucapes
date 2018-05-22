@@ -11,7 +11,7 @@ require_once 'includes/header.php' ;
             if ($_SESSION['utilisateur']['admin'] == 1){
         ?>
         <div class="btn-group-vertical" role="group" aria-label="...">
-            <a class="btn btn-default" href="#">Elèves</a>
+            <a class="btn btn-default" href="liste_eleves.php">Elèves</a>
             <a class="btn btn-default" href="documentation.php">Documentations</a>
         </div>
         <?php
